@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Pé do Juan - Assinatura</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarAcesso() {
+            const nome = document.getElementById('nome').value;
+            document.getElementById('nomeUsuario').innerText = nome;
+            document.getElementById('acesso').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>SPA dos Pés</h1>
+        <h2><img src="SPA-DETOX-1024x576.jpg" alt="As nossas massagens são sinônimo de vida"></h2>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#assinatura">Assinatura</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo ao SPA dos Pés, onde oferecemos as melhores massagens e tratamentos para os seus pés. Nossa missão é proporcionar relaxamento e bem-estar através de técnicas especializadas e um ambiente acolhedor.</p>
+        </section>
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <ul>
+                <li>Massagem Relaxante</li>
+                <li>Reflexologia</li>
+                <li>Tratamento Detox</li>
+                <li>Esfoliação</li>
+            </ul>
+        </section>
+        <section id="assinatura" class="assinatura">
+            <h2>Assine agora</h2>
+            <form action="javascript:void(0);" method="post" onsubmit="mostrarAcesso()">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="plano">Plano:</label>
+                <select id="plano" name="plano">
+                    <option value="mensal">Mensal - R$ 29,90</option>
+                    <option value="anual">Anual - R$ 299,90</option>
+                    <option value="semanal">Semanal - R$ 10,90</option>
+                    <option value="24hrs">Acesso 24hrs - R$ 5,90</option>
+                </select>
+                
+                <button type="submit">Assinar</button>
+            </form>
+        </section>
+        <section id="acesso" style="display: none;">
+            <h2>Obrigado por Assinar, <span id="nomeUsuario"></span>!</h2>
+            <p>Parabéns, você agora é um assinante do SPA dos Pés. Aproveite todos os benefícios exclusivos que preparamos para você.</p>
+            <p>Agora você tem acesso à sua assinatura!</p>
+            <section id="beneficios">
+                <h2>Benefícios da Assinatura</h2>
+                <ul>
+                    <li>Descontos exclusivos em todos os serviços</li>
+                    <li>Acesso prioritário a novos tratamentos</li>
+                    <li>Convites para eventos especiais</li>
+                    <li>Consultas gratuitas com nossos especialistas</li>
+                </ul>
+            </section>
+            <section id="dicas">
+                <h2>Dicas de Massagens</h2>
+                <ul>
+                    <li><strong>Massagem Relaxante:</strong> Use movimentos suaves e circulares para aliviar a tensão.</li>
+                    <li><strong>Reflexologia:</strong> Pressione pontos específicos nos pés para melhorar a circulação e reduzir o estresse.</li>
+                    <li><strong>Tratamento Detox:</strong> Combine massagem com óleos essenciais para desintoxicar e revitalizar a pele.</li>
+                    <li><strong>Esfoliação:</strong> Utilize um esfoliante suave para remover células mortas e deixar a pele macia.</li>
+                </ul>
+            </section>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Endereço: Rua das Flores, 123, Jaú, SP</p>
+            <p>Telefone: (14) 1234-5678</p>
+            <p>Email: contato@spadospes.com.br</p>
+        </section>
+    </main>
+    <footer>
+        <p>As nossas massagens são sinônimos de vida!</p>
+    </footer>
+</body>
+</html>
